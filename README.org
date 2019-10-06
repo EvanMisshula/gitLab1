@@ -18,7 +18,7 @@ where your last name is separated from your first with an underscore
 "_".  For example, my name is Evan Misshula. My directory would be:
 
 #+BEGIN_SRC sh :results value :exports code
-mkdir Evan-Misshula
+mkdir Evan_Misshula
 #+END_SRC
 
 
