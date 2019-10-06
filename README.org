@@ -1,0 +1,305 @@
+#+Title: Github Workshop Tech Talent Pipeline Residency @ Queens College
+#+Author: Evan Misshula
+
+* Introduction 
+This is the repo for Tech Talent Pipeline Summer 2016, you have to
+add a directory and upload a picture of your face.
+
+This is the README file for the repo.  Everyone is going to create
+a fork of this repository and create a directory whose name is
+
+#+BEGIN_SRC sh :results value :exports code
+mkdir firstName_lastName
+#+END_SRC
+
+
+where your last name is separated from your first with an underscore
+"_".  For example, my name is Evan Misshula. My directory would be:
+
+#+BEGIN_SRC sh :results value :exports code
+mkdir Evan-Misshula
+#+END_SRC
+
+
+ Once you have done this copy a picture of your face into the
+directory.  Next you will send me a pull request from your branch to
+add it to the repo. 
+
+Read on for details.
+
+* Set up your github account
+
+Set up the github account.  The next thing you should do is 
+fork the repository.  That means that you create your own copy of the
+repository in your github account.
+
+[[file:images/fork.png]]
+
+You don't edit anything on github.  Github stores your backup.  In
+order to edit your repo you have to copy it to your machine.  This
+requires you to download the git program to your local machine.  You
+will then need to install it.  There are several ways to do this.
+
+* Mac and windows
+
+** Mac 
+You just need to go this link:
+
+http://git-scm.com/download/mac
+
+Double click on the downloaded file and install in the usual way.
+** Windows
+You just need to go this link:
+
+http://git-scm.com/download/win
+
+Double click on the downloaded file and install in the usual way.
+
+* Configure git on your local machine [Don't skip]
+** On your machine open a terminal 
+*** Mac
+Left click on launchbad (the icon with the rocket on it).  In the
+search bar type terminal.  Left click the terminal and you are there.
+*** Windows
+**** Windows 8 and 8.1
+Right click on the Start button. This opens the power user menu.
+There is a shortcut for the terminal on that. Left click on it and you
+are there. Here is a larger article on this:
+
+http://pcsupport.about.com/od/windows-8/a/command-prompt-windows-8.htm
+
+**** Windows 7
+
+Click on the Start button. In the search box, type the following:
+
+~command~ 
+
+Click on Command Prompt in the search results listing. Here is a
+larger reference.
+
+http://pcsupport.about.com/od/windows7/a/command-prompt-windows-7.htm
+
+* Command line tutorial
+The command line is the primary way to interact with your operating system.  We are only going
+to use a few commands but we have to use different commands depending whether you are running
+windows or mac.  Mac and Linux systems have mostly the same commands since Mac OS X is built on top
+of Berkley Software Distribution Unix.  Linux and Mac are sometimes called *nix systemes. Windows
+NT (the forerunner of Windows 7 and Windows 8) was built by the designers of Digital Equipment Corporation
+(DEC) Vax system.
+
+Here are the commmands we will use:
+
+| *nix | windows   | puropse                                   |
+|------+-----------+-------------------------------------------|
+| pwd  | echo %cd% | tell us what directory we are in          |
+| ls   | dir       | list the files in the directory we are in |
+| cp   | copy      | copy files from one place to another      |
+| cd   | cd        | change directory                          |
+| .    | .         | means here                                |
+| ..   | ..        | up one directory                          | 
+
+* The filesystem  
+** Mac OS X
+
+Your documents are in: 
+#+BEGIN_SRC sh :exports code
+/Users/<your name>/Documents
+#+END_SRC
+
+
+In the terminal type:
+#+BEGIN_SRC sh :exports code
+cd Documents
+#+END_SRC
+
+
+To check where you are type:
+
+#+BEGIN_SRC sh :exports
+pwd
+#+END_SRC
+
+This returns the present working directory.
+** Windows
+
+Your Documents are in C:\Users\<your name>\Documents.  In the terminal type:
+#+BEGIN_SRC sh :exports code
+cd Documents
+#+END_SRC
+
+
+* Set global git variables
+Tell Git your name so your commits will be properly labeled. Type
+everything after the $ here:
+
+#+BEGIN_SRC sh :exports code
+git config --global user.name "Your Name"
+#+END_SRC
+
+
+
+Tell Git the email address that will be associated with your Git
+commits. The email you specify should be the same one you used to sign
+up for GitHub.
+
+#+BEGIN_SRC sh :exports code
+git config --global user.email "YOUR EMAIL ADDRESS"
+#+END_SRC
+
+* Clone the repository from your github account to your local machine
+
+Now go back to your browser and open up the repo that you forked.  On
+the right side of the page near the top, there is a box under
+settings.  *BE CAREFUL* This is tricky. In that box is the URL of your
+fork.  Here is a picture.
+
+[[file:images/url.png]]
+
+Make sure the protocol is set to https. The others require you to set
+up ssh keys which are worth a whole tutorial to themselves.  Now that
+you know what you are looking for.  Copy it to the clipboard by
+left-clicking the button. You clone it by typing:
+
+#+BEGIN_SRC sh :exports code
+git clone https@github.com:<your_github_username>/gitTutorial.git
+#+END_SRC
+
+Now you have your own copy of the repo both on your machine and in your github account.
+If you want to work with the files in the ~gitTutorial~ directory, you should change into 
+that directory. To do this you should type:
+
+#+BEGIN_SRC sh :exports code
+cd gitTutorial
+#+END_SRC
+
+In an text editor, you can look at any of the files. You can also list the files by 
+typing either ~ls~ or ~dir~ depending on your operating system.
+
+* Master vs. branch
+You actually have a copy of the master on your machine.  When you add something
+for the first time, you should not add to the master you should make changes to 
+your own branch. Usually the branch name is the topic.  In this case use your
+first name.  Type:
+
+#+BEGIN_SRC sh :exports code
+git branch <first_name>
+#+END_SRC
+
+We can see all of the branches by typing:
+
+#+BEGIN_SRC sh :exports code
+git branch
+#+END_SRC
+
+The star means that we are still on the master branch.
+
+* Switch branches
+Now we are going to begin constructing the changes we want
+incorporated into the main project. In the last section we made a
+branch now we are going to start to change it.  To switch to your
+branch, type:
+#+BEGIN_SRC :exports code
+git checkout <first_name>
+#+END_SRC
+
+* Create a directory
+
+If you listed the files in the gitTutorial directory, you should see
+that there is a directory called students. You should change
+directories into it by typing:
+
+#+BEGIN_SRC sh :exports code
+cd students/sect01
+#+END_SRC
+
+or 
+
+#+BEGIN_SRC sh :exports code
+cd students/sect01
+#+END_SRC
+
+Create a directory with your first and last name from the command line:
+
+#+BEGIN_SRC sh :exports code
+mkdir <firstName_LastName>
+#+END_SRC
+
+* Copy your picture into that directory
+
+You can use the command line or a gui to copy your picture into the
+directory you just created.
+
+* Add your picture to your branch
+
+Make sure your image file is called your ~firstName_lastName.jpg~ or
+~firstName_lastName.png~.  For example, my photo would be
+~Evan_Misshula.jpg~.
+
+Next add your picture to your branch.  You will do
+this by adding your image file to your branch by typing:
+
+#+BEGIN_SRC sh :exports code
+git add firstName_lastName.jpg
+#+END_SRC
+
+* Commit your local changes
+
+You should save or commit your changes with a message.  Type the following:
+
+#+BEGIN_SRC sh :exports code
+git commit -m "added my picture."
+#+END_SRC
+
+To update your copy on github you have to push your changes which are in 
+your firstName branch. Before I show you how to do that, let's make sure
+no one else has pushed changes that will cause a conflict with our changes.
+
+* See everyone's changes
+** Configure an upstream master
+Git does not automatically know where you want to pull from.
+To see where git is pulling from, type:
+
+#+BEGIN_SRC sh :exports code
+git remote -v
+#+END_SRC
+
+The "-v" is a common command line flag for verbose.  Because you 
+forked both the (fetch) where you pull from and where you push to
+(push) are the same. Now specify a new upstream repository that will
+be synced by the fork.
+
+#+BEGIN_SRC sh :exports code
+git remote add upstream git://github.com/fcm742-01/gitTutorial.git
+#+END_SRC
+
+** Sync the fork
+To see everyone's accepted changes to the master, you have to pull
+from the upstream master. This requires a /fetch/ command.  Make sure
+that you have commited your changes.  Type:
+
+
+#+BEGIN_SRC sh :exports code
+git fetch upstream
+#+END_SRC
+
+
+You have now pulled the changes from my branch to your local machine
+and onto your ~firstName~ branch. The next step is to merge it into
+your ~firstName~ branch.
+
+#+BEGIN_SRC sh :exports code
+git merge upstream/firstName
+#+END_SRC
+
+You will want to save those to your github account as well.  So to finish, type:
+
+#+BEGIN_SRC sh :exports code
+git push origin firstName
+#+END_SRC
+
+* Pull request
+
+If you refresh your github page you will see that the repository now
+has two braches.  Switch to the firstName branch and send a pull
+request.
+
