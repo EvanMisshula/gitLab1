@@ -1,15 +1,16 @@
-#+Title: Github Workshop Tech Talent Pipeline Residency @ Queens College
+#+Title: Github Tutorial for CS275
 #+Author: Evan Misshula
 
 * Introduction 
-This is the repo for Tech Talent Pipeline Summer 2016, you have to
-add a directory and upload a picture of your face.
+This is the repo for CSCI 275 Fall 2019, you have to add a directory
+and upload two files, the first is a picture of your face and the
+second is a file called origin.org that says where you are from.
 
 This is the README file for the repo.  Everyone is going to create
 a fork of this repository and create a directory whose name is
 
 #+BEGIN_SRC sh :results value :exports code
-mkdir firstName_lastName
+mkdir firstName\_lastName
 #+END_SRC
 
 
