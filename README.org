@@ -212,7 +212,7 @@ git add firstName_lastName.jpg
 You should save or commit your changes with a message.  Type the following:
 
 #+BEGIN_SRC sh :exports code
-git commit -m "added my picture."
+git commit -m "adds my (Evan Misshula) picture."
 #+END_SRC
 
 To update your copy on github you have to push your changes which are in 
@@ -234,7 +234,7 @@ forked both the (fetch) where you pull from and where you push to
 be synced by the fork.
 
 #+BEGIN_SRC sh :exports code
-git remote add upstream git://github.com/fcm742-01/gitTutorial.git
+git remote add upstream git@github.com:EvanMisshula/gitLab1.git
 #+END_SRC
 
 ** Sync the fork
