@@ -22,11 +22,35 @@ mkdir Evan_Misshula
 #+END_SRC
 
 
- Once you have done this copy a picture of your face into the
-directory.  Next you will send me a pull request from your branch to
+Once you have done this copy a picture of your face into the
+directory. After that, you will create a file called origin.org that
+has what neighborhood you live in and zip code.
+
+
+ Next you will send me a pull request from your branch to
 add it to the repo. 
 
 Read on for details.
+
+* Install git on your VM
+
+To install git type:
+
+
+#+BEGIN_EXAMPLE
+sudo install git
+#+END_EXAMPLE
+
+Then check that it has been installed with 
+
+#+BEGIN_SRC shell :results value :exports code
+git --version
+#+END_SRC
+Your results should be:
+
+#+RESULTS:
+: git version 2.19.1
+
 
 * Set up your github account
 
@@ -41,44 +65,7 @@ order to edit your repo you have to copy it to your machine.  This
 requires you to download the git program to your local machine.  You
 will then need to install it.  There are several ways to do this.
 
-* Mac and windows
-
-** Mac 
-You just need to go this link:
-
-http://git-scm.com/download/mac
-
-Double click on the downloaded file and install in the usual way.
-** Windows
-You just need to go this link:
-
-http://git-scm.com/download/win
-
-Double click on the downloaded file and install in the usual way.
-
 * Configure git on your local machine [Don't skip]
-** On your machine open a terminal 
-*** Mac
-Left click on launchbad (the icon with the rocket on it).  In the
-search bar type terminal.  Left click the terminal and you are there.
-*** Windows
-**** Windows 8 and 8.1
-Right click on the Start button. This opens the power user menu.
-There is a shortcut for the terminal on that. Left click on it and you
-are there. Here is a larger article on this:
-
-http://pcsupport.about.com/od/windows-8/a/command-prompt-windows-8.htm
-
-**** Windows 7
-
-Click on the Start button. In the search box, type the following:
-
-~command~ 
-
-Click on Command Prompt in the search results listing. Here is a
-larger reference.
-
-http://pcsupport.about.com/od/windows7/a/command-prompt-windows-7.htm
 
 * Command line tutorial
 The command line is the primary way to interact with your operating system.  We are only going
@@ -100,12 +87,11 @@ Here are the commmands we will use:
 | ..   | ..        | up one directory                          | 
 
 * The filesystem  
-** Mac OS X
 
 Your documents are in: 
-#+BEGIN_SRC sh :exports code
-/Users/<your name>/Documents
-#+END_SRC
+#+BEGIN_EXAMPLE
+/home/<your name>/Documents
+#+END_EXAMPLE
 
 
 In the terminal type:
@@ -121,14 +107,6 @@ pwd
 #+END_SRC
 
 This returns the present working directory.
-** Windows
-
-Your Documents are in C:\Users\<your name>\Documents.  In the terminal type:
-#+BEGIN_SRC sh :exports code
-cd Documents
-#+END_SRC
-
-
 * Set global git variables
 Tell Git your name so your commits will be properly labeled. Type
 everything after the $ here:
@@ -138,7 +116,6 @@ git config --global user.name "Your Name"
 #+END_SRC
 
 
-
 Tell Git the email address that will be associated with your Git
 commits. The email you specify should be the same one you used to sign
 up for GitHub.
@@ -146,6 +123,13 @@ up for GitHub.
 #+BEGIN_SRC sh :exports code
 git config --global user.email "YOUR EMAIL ADDRESS"
 #+END_SRC
+
+You can edit this by using emacs:
+
+#+BEGIN_EXAMPLE
+emacs ~/.gitconfig
+#+END_EXAMPLE
+
 
 * Clone the repository from your github account to your local machine
 
@@ -162,19 +146,19 @@ you know what you are looking for.  Copy it to the clipboard by
 left-clicking the button. You clone it by typing:
 
 #+BEGIN_SRC sh :exports code
-git clone https@github.com:<your_github_username>/gitTutorial.git
+git clone https@github.com:<your_github_username>/gitLab1.git
 #+END_SRC
 
 Now you have your own copy of the repo both on your machine and in your github account.
-If you want to work with the files in the ~gitTutorial~ directory, you should change into 
+If you want to work with the files in the ~gitLab1~ directory, you should change into 
 that directory. To do this you should type:
 
 #+BEGIN_SRC sh :exports code
 cd gitTutorial
 #+END_SRC
 
-In an text editor, you can look at any of the files. You can also list the files by 
-typing either ~ls~ or ~dir~ depending on your operating system.
+In Emacs, you can look at any of the files. You can also list the files by 
+typing either ~ls -lhaF~.
 
 * Master vs. branch
 You actually have a copy of the master on your machine.  When you add something
