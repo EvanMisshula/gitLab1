@@ -174,13 +174,13 @@ that there is a directory called students. You should change
 directories into it by typing:
 
 #+BEGIN_SRC sh :exports code
-cd students/sect01
+cd students/
 #+END_SRC
 
 or 
 
 #+BEGIN_SRC sh :exports code
-cd students/sect01
+cd students/
 #+END_SRC
 
 Create a directory with your first and last name from the command line:
