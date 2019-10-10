@@ -38,7 +38,7 @@ To install git type:
 
 
 #+BEGIN_EXAMPLE
-sudo install git
+sudo apt-get install git
 #+END_EXAMPLE
 
 Then check that it has been installed with 
