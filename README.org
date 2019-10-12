@@ -234,7 +234,7 @@ forked both the (fetch) where you pull from and where you push to
 be synced by the fork.
 
 #+BEGIN_SRC sh :exports code
-git remote add upstream git@github.com:EvanMisshula/gitLab1.git
+git remote add upstream https://github.com/EvanMisshula/gitLab1.git
 #+END_SRC
 
 ** Sync the fork
