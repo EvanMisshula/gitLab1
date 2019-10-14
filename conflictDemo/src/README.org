@@ -2,5 +2,4 @@
 
 We are going to show you how to resolve a git conflict in two files.
 
-This is the line we will change both on the remote and locally.
-
+We have made a change to the remote
