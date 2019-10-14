@@ -1,4 +1,7 @@
 import random as rd
+import numpy as nd
+
+
 
 rd.seed(42)
 
