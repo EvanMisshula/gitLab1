@@ -2,5 +2,6 @@
 
 We are going to show you how to resolve a git conflict in two files.
 
-Here is my innocent local change
+
+Here is our line that we can change to cause a conflict
 
