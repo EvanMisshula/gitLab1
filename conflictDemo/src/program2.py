@@ -14,8 +14,9 @@ while seriesOver==False:
     print(" You have 7 guesses to guess it")
     guessNum = 0
     mySecretNum=rd.randint(1,64)
-    my_qstring="my secret number is {secret}.".format(secret=mySecretNum)
-    print(my_qstring)
+    qString="my secret number is {secret}.".format(secret=mySecretNum)
+    print(qString)
+
     rawGuess = int(input('What is your guess?'))
 
     if (rawGuess>=1 and rawGuess<=64):
