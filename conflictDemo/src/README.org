@@ -1,0 +1,9 @@
+* Demo of a two file merge conflict
+
+We are going to show you how to resolve a git conflict in two files.
+
+Here is a better change. Arrgh!!!
+
+
+
+
