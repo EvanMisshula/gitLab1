@@ -134,7 +134,7 @@ If you want to work with the files in the ~gitLab1~ directory, you should change
 that directory. To do this you should type:
 
 #+BEGIN_SRC sh :exports code
-cd gitTutorial
+cd gitLab1
 #+END_SRC
 
 In Emacs, you can look at any of the files. You can also list the files by 
@@ -234,7 +234,7 @@ forked both the (fetch) where you pull from and where you push to
 be synced by the fork.
 
 #+BEGIN_SRC sh :exports code
-git remote add upstream git@github.com:EvanMisshula/gitLab1.git
+git remote add upstream https://github.com/EvanMisshula/gitLab1.git
 #+END_SRC
 
 ** Sync the fork
